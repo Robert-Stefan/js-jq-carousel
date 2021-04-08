@@ -63,17 +63,26 @@ function nextPrevSlide(direction) {
             activeImage.prev('img').addClass('active');
             activeCircle.prev('i').addClass('active');
         }
-    }
-    //DOTS
+    };
+    //Dots
     //References
 
-    var dot = $('.nav > i');
+    var dots = $(".nav i");
+    var image = $(".images img");
 
-    //FUNCTION
+    //FUNCTIONS
+    dots.click( function(){
+        // indice
 
-    dot.click(function() {
+        var dot = dots.index(this);
+        // RESET
 
+        image.removeClass("active");
+        dots.removeClass("active");
+        //AddClass
+
+        $(image[dot]).addClass("active");
+        $(dots[dot]).addClass("active");
     });
-
 }
 
