@@ -52,7 +52,9 @@
 }
 .nav > i {
     margin: 0 20px;
+    cursor: pointer;
 }
 .nav > i.active {
     color: blue;
+    cursor: pointer;
 }
