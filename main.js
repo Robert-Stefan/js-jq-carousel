@@ -25,6 +25,27 @@ $(document).ready(function() {
         }
     });
 
+    //Dots
+    //References
+
+    var dots = $(".nav i");
+    var image = $(".images img");
+
+    //FUNCTIONS
+    dots.click( function(){
+        // indice
+
+        var dot = dots.index(this);
+        // RESET
+
+        image.removeClass("active");
+        dots.removeClass("active");
+        //AddClass
+
+        $(image[dot]).addClass("active");
+        $(dots[dot]).addClass("active");
+    });
+
 });
 
 //FUNCTIONS
@@ -64,25 +85,5 @@ function nextPrevSlide(direction) {
             activeCircle.prev('i').addClass('active');
         }
     };
-    //Dots
-    //References
-
-    var dots = $(".nav i");
-    var image = $(".images img");
-
-    //FUNCTIONS
-    dots.click( function(){
-        // indice
-
-        var dot = dots.index(this);
-        // RESET
-
-        image.removeClass("active");
-        dots.removeClass("active");
-        //AddClass
-
-        $(image[dot]).addClass("active");
-        $(dots[dot]).addClass("active");
-    });
 }
 
